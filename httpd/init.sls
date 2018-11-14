@@ -5,4 +5,4 @@ install_httpd:
 start_httpd:
   service.running:
     - name: httpd
-    - enabled: True
+    - enable: True

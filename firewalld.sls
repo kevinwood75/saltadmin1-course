@@ -1,6 +1,7 @@
 install_firewalld:
     pkg.installed:
         - name: firewalld
+
 firewalld_open_web:
     firewalld.present:
         - name: public
@@ -8,6 +9,6 @@ firewalld_open_web:
         - ports:
             - 80/tcp
             - 443/tcp
-        -services:
+        - services:
             - ssh
             - dhcpv6-client
