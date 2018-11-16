@@ -6,11 +6,11 @@ include:
 
 install_httpd:
   pkg.installed:
-    - name: {{apache.name}}
+    - name: {{pillar['pkg']['httpd']}}
 
 start_httpd:
   service.running:
-    - name: {{apache.name}}
+    - name: {{pillar['pkg']['httpd']}}
     - enable: true
     - require:
       - pkg: install_httpd
